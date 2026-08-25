@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.Gates.all;
+
+entity halfsubtractor2 is
+	port(
+		A,B : in std_logic;
+		D,Bin : out std_logic
+	);
+end entity halfsubtractor2
+

@@ -1,0 +1,33 @@
+|mux2x1
+I0 => AND_2:g2.A
+I1 => AND_2:g3.A
+S => NOR_2:g1.A
+S => NOR_2:g1.B
+S => AND_2:g3.B
+Y << OR_2:g4.Y
+
+
+|mux2x1|NOR_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux2x1|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux2x1|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux2x1|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

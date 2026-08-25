@@ -1,0 +1,462 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/simulation/modelsim
+Eand_2
+Z1 w1786069306
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/Gates.vhdl
+Z5 FC:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/Gates.vhdl
+l0
+L57
+VW2QdRhzH^gh`1Z4bifmBf3
+!s100 <1nD4fLK5FZ?LMSb4GDe>3
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1786698074
+!i10b 1
+Z8 !s108 1786698074.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/Gates.vhdl|
+Z10 !s107 C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/Gates.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aequations
+R2
+R3
+Z13 DEx4 work 5 and_2 0 22 W2QdRhzH^gh`1Z4bifmBf3
+l62
+L61
+Z14 VnDT8d]LGAGAW:`<`mSSSg3
+Z15 !s100 HhM:H^IAkB>a2X9?`<@_k0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z16 w1786697776
+R2
+R3
+R0
+Z17 8C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/DUT.vhdl
+Z18 FC:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/DUT.vhdl
+l0
+L7
+VmXmn<GGYU6`E>U;CG[K?d3
+!s100 dN28=]3=Vi_RLk?M?58Ll1
+R6
+31
+R7
+!i10b 1
+Z19 !s108 1786698073.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/DUT.vhdl|
+Z21 !s107 C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 mXmn<GGYU6`E>U;CG[K?d3
+l18
+L12
+VoZHKa?8IZii;LSzNaWZ;g3
+!s100 :5VFDEzdUJmNl]6RY2Z202
+R6
+31
+R7
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R11
+R12
+Pgates
+R2
+R3
+R1
+R0
+R4
+R5
+l0
+L7
+VNcY4A7TbR^WLRT`2c:]N[1
+!s100 Dc>f1MeC:9iI_HnNzJ;KT1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ehalf_adder
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L124
+VIZiX8mi96cJ??CnPO^U<C3
+!s100 U;nQkfQTnI7V?fejYIM<g2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+Z22 DEx4 work 10 half_adder 0 22 IZiX8mi96cJ??CnPO^U<C3
+l129
+L128
+Z23 VCD;QIVbkQ<kd@U[I6UILl1
+Z24 !s100 E9g6H`e<YSE@nSQ7XJJ0D0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Einverter
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L45
+V^STYmNzH_F58ZVT>FF?cU2
+!s100 S3joTbdXW90XOjU4i1V^60
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+Z25 DEx4 work 8 inverter 0 22 ^STYmNzH_F58ZVT>FF?cU2
+l50
+L49
+Z26 VY38KWB:XEkc0^3YzW57dj2
+Z27 !s100 YS6CiXJRJ@EE5??nNB03h1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emux2x1
+Z28 w1786696509
+Z29 DPx4 work 5 gates 0 22 NcY4A7TbR^WLRT`2c:]N[1
+R2
+R3
+R0
+Z30 8C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/2x1_mux.vhd
+Z31 FC:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/2x1_mux.vhd
+l0
+L7
+V`]la3>8a70>8AVTWzCF6Q2
+!s100 k@PCkLQ<4:gondQY^[VLP0
+R6
+31
+Z32 !s110 1786698073
+!i10b 1
+R19
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/2x1_mux.vhd|
+Z34 !s107 C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/2x1_mux.vhd|
+!i113 1
+R11
+R12
+Astructural
+R29
+R2
+R3
+DEx4 work 6 mux2x1 0 22 `]la3>8a70>8AVTWzCF6Q2
+l20
+L16
+VSezXdCj[O;KnFj26If3kT2
+!s100 >N`Bgf=7:01o<P;?NiV?F1
+R6
+31
+R32
+!i10b 1
+R19
+R33
+R34
+!i113 1
+R11
+R12
+Enand_2
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L68
+V7Q=aZ>7Mzize[[IfQRQ;`2
+!s100 bRA[c>EJKJWNgCR8ghUC72
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+Z35 DEx4 work 6 nand_2 0 22 7Q=aZ>7Mzize[[IfQRQ;`2
+l73
+L72
+Z36 V?4CWin9:[TT0?g`jLS0E12
+Z37 !s100 I_RPhB=oe82f_Rij[[8JF2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enor_2
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L90
+V3?]TGiHba`>]BD;kULm?^3
+!s100 edYUJ4gTm_U:i]N@4Q=Gg3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+Z38 DEx4 work 5 nor_2 0 22 3?]TGiHba`>]BD;kULm?^3
+l95
+L94
+Z39 VNFd;eVo`>0To8@;Oh4diC1
+Z40 !s100 ESBi5;Q?X6mLo`Q3JWZ4Q0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_2
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L79
+V>IC]i[S3fUX<m=i^H@9eA0
+!s100 Be23a45mg=gMiVXM<6Peg0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+Z41 DEx4 work 4 or_2 0 22 >IC]i[S3fUX<m=i^H@9eA0
+l84
+L83
+Z42 VATF[^b3mj8cbo9?98=TRF0
+Z43 !s100 8JcIMFHmJzkaC?5jW]DnS3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z44 w1786649990
+R3
+R2
+R0
+Z45 8C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/Testbench.vhdl
+Z46 FC:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/Testbench.vhdl
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R32
+!i10b 1
+R19
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/Testbench.vhdl|
+Z48 !s107 C:/Users/medha/Downloads/Mobile Devices/Day 2/Day 2/Q1/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l69
+L9
+VRMEgN<iJH:dk@XCUj=ZHi3
+!s100 ?b[Q_zSK7Y_[SNK^fAEUe0
+R6
+31
+R32
+!i10b 1
+R19
+R47
+R48
+!i113 1
+R11
+R12
+Exnor_2
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L113
+VYmZa`=[Sj]6Zh9_O7]F;L0
+!s100 SMA^OIVGhoiKW^3FaJ8oW3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+Z49 DEx4 work 6 xnor_2 0 22 YmZa`=[Sj]6Zh9_O7]F;L0
+l118
+L117
+Z50 VAJO?a^^jGBIX`G]K^jl@P2
+Z51 !s100 =aKk4IJ>H;6]KzcaGm^Mn0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Exor_2
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L102
+VDUd5fH`?6?dZ[>AnHc54;2
+!s100 h::V4HH0c4?lKoYnW6M?E3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+Z52 DEx4 work 5 xor_2 0 22 DUd5fH`?6?dZ[>AnHc54;2
+l107
+L106
+Z53 VT`Lnd3[S1KOT?Q^d?zomG2
+Z54 !s100 85OK8@mo8d3=fmz<5BnRf2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

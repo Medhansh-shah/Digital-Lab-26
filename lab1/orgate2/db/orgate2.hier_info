@@ -1,0 +1,24 @@
+|DUT
+input_vector[0] => orgate2:add_instance.B
+input_vector[1] => orgate2:add_instance.A
+output_vector[0] <= orgate2:add_instance.Y
+
+
+|DUT|orgate2:add_instance
+A => NOR_2:G1.A
+B => NOR_2:G1.B
+Y <= NOR_2:G2.Y
+
+
+|DUT|orgate2:add_instance|NOR_2:G1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|orgate2:add_instance|NOR_2:G2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

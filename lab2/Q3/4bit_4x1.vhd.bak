@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity mux4b is
+    Port (
+        I0, I1, I2, I3 : in std_logic;
+        S1, S2         : in std_logic;
+        Y              : out std_logic
+    );
+end mux4b;
+
+architecture Structural of mux4b is
+
+component mux4x1 is
+    port(
+        I0 : in std_logic;
+        I1 : in std_logic;
+        S  : in std_logic;
+        Y  : out std_logic
+    );
+end component;
+
+signal w1, w2 : std_logic;
+
+begin
+
+M1 : mux2x1 port map(I0, I1, S1, w1);
+M2 : mux2x1 port map(I2, I3, S1, w2);
+M3 : mux2x1 port map(w1, w2, S2, Y);
+
+end Structural;

@@ -1,0 +1,110 @@
+|mux4x1
+I0 => mux2x1:M1.I0
+I1 => mux2x1:M1.I1
+I2 => mux2x1:M2.I0
+I3 => mux2x1:M2.I1
+S1 => mux2x1:M1.S
+S1 => mux2x1:M2.S
+S2 => mux2x1:M3.S
+Y << mux2x1:M3.Y
+
+
+|mux4x1|mux2x1:M1
+I0 => AND_2:g2.A
+I1 => AND_2:g3.A
+S => NOR_2:g1.A
+S => NOR_2:g1.B
+S => AND_2:g3.B
+Y <= OR_2:g4.Y
+
+
+|mux4x1|mux2x1:M1|NOR_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M1|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M1|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M1|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M2
+I0 => AND_2:g2.A
+I1 => AND_2:g3.A
+S => NOR_2:g1.A
+S => NOR_2:g1.B
+S => AND_2:g3.B
+Y <= OR_2:g4.Y
+
+
+|mux4x1|mux2x1:M2|NOR_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M2|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M2|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M2|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M3
+I0 => AND_2:g2.A
+I1 => AND_2:g3.A
+S => NOR_2:g1.A
+S => NOR_2:g1.B
+S => AND_2:g3.B
+Y <= OR_2:g4.Y
+
+
+|mux4x1|mux2x1:M3|NOR_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M3|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M3|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux4x1|mux2x1:M3|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

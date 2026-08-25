@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+
+% ---------- PREAMBLE ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+% No \title/\author/\maketitle here — the sample report just uses a plain
+% text header on page 1, not a formal title page. Recreating that below.
+
+\begin{document}
+
+% ================= PAGE 1: HEADER =================
+% Matches the sample: course/lab name, then Name and Roll No, left-aligned,
+% no big centered title block.
+\noindent
+\textbf{\Large EE214 Lab-1 Report}\\[4pt]
+\textbf{Name:} Medhansh\\
+\textbf{Roll No.:} 25B3986
+
+\vspace{1cm}
+% Add a one-line intro/objective here if you want one on page 1.
+% Otherwise leave page 1 as just the header and let the scan start on page 2.
+
+\newpage
+
+% ================= PAGES 2-5: INSERTED SCAN =================
+% This is your handwritten derivation / truth-table pages, scanned as one
+% PDF (e.g. covering the AND/XOR/OR gate and half/full subtractor NOR-gate
+% derivations by hand, with signature/verification on the last page).
+%
+% pages=-       -> insert every page of the scan
+% frame         -> thin border, useful to visually mark where the scan starts/ends
+% pagecommand={} -> suppress any header/footer styling on these pages
+\includepdf[pages=-, frame, pagecommand={}]{scan1.pdf}
+
+% ================= TYPED SECTIONS: ONE PER CIRCUIT =================
+% From page 6 onward, the sample repeats the same pattern for each gate/
+% circuit: a bold heading, a short description, then two figures — the
+% schematic and the simulation waveform. Below is that pattern as a
+% reusable block. Copy the block for each additional circuit.
+
+\section*{OR gate}
+Write your description / observations here.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{or_schematic.png}
+  \caption{OR gate schematic}
+  \label{fig:or-schematic}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{or_waveform.png}
+  \caption{OR gate simulation waveform}
+  \label{fig:or-waveform}
+\end{figure}
+
+\newpage
+\section*{XOR gate}
+Write your description / observations here.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{xor_schematic.png}
+  \caption{XOR gate schematic}
+  \label{fig:xor-schematic}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{xor_waveform.png}
+  \caption{XOR gate simulation waveform}
+  \label{fig:xor-waveform}
+\end{figure}
+
+\newpage
+\section*{AND gate}
+Write your description / observations here.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{and_schematic.png}
+  \caption{AND gate schematic}
+  \label{fig:and-schematic}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{and_waveform.png}
+  \caption{AND gate simulation waveform}
+  \label{fig:and-waveform}
+\end{figure}
+
+\newpage
+\section*{Half Subtractor}
+Write your description / observations here.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{halfsub_schematic.png}
+  \caption{Half Subtractor schematic}
+  \label{fig:halfsub-schematic}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{halfsub_waveform.png}
+  \caption{Half Subtractor simulation waveform}
+  \label{fig:halfsub-waveform}
+\end{figure}
+
+\newpage
+\section*{Full Subtractor}
+Write your description / observations here.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{fullsub_schematic.png}
+  \caption{Full Subtractor schematic}
+  \label{fig:fullsub-schematic}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{fullsub_waveform.png}
+  \caption{Full Subtractor simulation waveform}
+  \label{fig:fullsub-waveform}
+\end{figure}
+
+% ================= ADDING MORE CIRCUITS LATER =================
+% To add another circuit (e.g. a Full Adder in Lab-2), copy one whole
+% block above (from \newpage \section*{...} down to the second
+% \end{figure}), rename the section heading, swap the two image filenames,
+% and update the two \caption / \label lines.
+
+\end{document}

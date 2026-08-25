@@ -1,0 +1,129 @@
+|fullsubtractor2
+A => xor_gate:G1.A
+A => NOR_2:G4.A
+B => xor_gate:G1.B
+B => NOR_2:G3.A
+B => NOR_2:G3.B
+Bin => xor_gate:G2.B
+Bin => NOR_2:G6.A
+Bin => NOR_2:G6.B
+D << xor_gate:G2.Y
+Borrow << NOR_2:G9.Y
+
+
+|fullsubtractor2|xor_gate:G1
+A => NOR_2:G1.A
+A => NOR_2:G1.B
+A => NOR_2:G3.A
+B => NOR_2:G2.A
+B => NOR_2:G2.B
+B => NOR_2:G3.B
+Y <= NOR_2:G5.Y
+
+
+|fullsubtractor2|xor_gate:G1|NOR_2:G1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G1|NOR_2:G2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G1|NOR_2:G3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G1|NOR_2:G4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G1|NOR_2:G5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G2
+A => NOR_2:G1.A
+A => NOR_2:G1.B
+A => NOR_2:G3.A
+B => NOR_2:G2.A
+B => NOR_2:G2.B
+B => NOR_2:G3.B
+Y <= NOR_2:G5.Y
+
+
+|fullsubtractor2|xor_gate:G2|NOR_2:G1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G2|NOR_2:G2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G2|NOR_2:G3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G2|NOR_2:G4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|xor_gate:G2|NOR_2:G5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|NOR_2:G3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|NOR_2:G4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|NOR_2:G6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|NOR_2:G7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|NOR_2:G8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fullsubtractor2|NOR_2:G9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
