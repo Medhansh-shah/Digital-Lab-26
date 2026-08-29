@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.Gates.all;
+
+entity bcdadder is
+    Port (
+        A0,A1, A2, A3 : in std_logic;
+        B0, B1, B2, B3 : in std_logic;
+        Cin : in std_logic;
+        S0, S1, S2, S3 : out std_logic;
+        Cout : out std_logic;
+    );
+end bcdadder;
+
+architecture Structural of bcdadder is
+
+component 4bcd is
+    port(
+        I0 : in std_logic;
+        I1 : in std_logic;
+        Cin : in std_logic;
+        Y : out std_logic;
+        Cout : out std_logic;   
+    );
+end component;
+
+begin
+
