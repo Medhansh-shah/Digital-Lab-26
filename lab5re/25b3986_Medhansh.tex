@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+% ---------- PREAMBLE ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+% No \title/\author/\maketitle here — the sample report just uses a plain
+% text header on page 1, not a formal title page. Recreating that below.
+
+\begin{document}
+
+% ================= PAGE 1: HEADER =================
+% Matches the sample: course/lab name, then Name and Roll No, left-aligned,
+% no big centered title block.
+\noindent
+\textbf{\Large EE214 Lab-5 Report}\\[4pt]
+\textbf{Name:} Medhansh\\
+\textbf{Roll No.:} 25B3986
+
+\vspace{1cm}
+% Add a one-line intro/objective here if you want one on page 1.
+% Otherwise leave page 1 as just the header and let the scan start on page 2.
+
+\newpage
+
+% ================= PAGES 2-5: INSERTED SCAN =================
+% This is your handwritten derivation / truth-table pages, scanned as one
+% PDF (e.g. covering the AND/XOR/OR gate and half/full subtractor NOR-gate
+% derivations by hand, with signature/verification on the last page).
+%
+% pages=-       -> insert every page of the scan
+% frame         -> thin border, useful to visually mark where the scan starts/ends
+% pagecommand={} -> suppress any header/footer styling on these pages
+\includepdf[pages=-, frame, pagecommand={}]{scan1.pdf}
+
+% ================= TYPED SECTIONS: ONE PER CIRCUIT =================
+% From page 6 onward, the sample repeats the same pattern for each gate/
+% circuit: a bold heading, a short description, then two figures — the
+% schematic and the simulation waveform. Below is that pattern as a
+% reusable block. Copy the block for each additional circuit.
+
+\section*{ALU}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Screenshot 2026-09-06 185315.png}
+  \caption{ALU schematic}
+  \label{fig:alu-schematic}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Screenshot 2026-09-04 145556.png}
+  \caption{ALU simulation waveform}
+  \label{fig:alu-waveform}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Screenshot 2026-09-06 185818.png}
+  \caption{Transcript}
+  \label{fig:alu-transcript}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Screenshot 2026-09-04 160918.png}
+  \caption{Scanchain output file}
+  \label{fig:scanchain-output}
+\end{figure}
+
+% ================= ADDING MORE CIRCUITS LATER =================
+% To add another circuit (e.g. a Full Adder in Lab-2), copy one whole
+% block above (from \newpage \section*{...} down to the second
+% \end{figure}), rename the section heading, swap the two image filenames,
+% and update the two \caption / \label lines.
+
+\end{document}
