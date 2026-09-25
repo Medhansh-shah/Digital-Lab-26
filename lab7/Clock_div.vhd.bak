@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Clock_div is
+	port(
+		clk1 : in std_logic;
+		clk2 : out std_logic
+		);
+	end Clock_div;
+	
+architecture caesar of Clock_div is 
+	signal counter : INTEGER := 0;
+	signal temp : std_logic :='0';
+	begin process(clk1) is
+	begin 
+		if rising_edge(clk1) then
+		counter <= counter + 1;
+		if(counter > 5) then 
+		counter <= 0;
+		temp <= not(temp);
+		else 
+		temp <= temp;
+		end if;
+		clk2 <=temp;
+		end if;
+		
+		end process;
+		end caesar;	
+	

@@ -1,0 +1,230 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DigitalLab26/lab6/simulation/modelsim
+Edff_reset
+Z1 w1789106049
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8D:/DigitalLab26/lab6/seq_gen2.vhd
+Z5 FD:/DigitalLab26/lab6/seq_gen2.vhd
+l0
+L37
+VGV;2zQ>aU]?G?Z84:hzWf3
+!s100 iA]GVF<iH1kbZDBMDU3m80
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1789117398
+!i10b 1
+Z8 !s108 1789117398.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab6/seq_gen2.vhd|
+Z10 !s107 D:/DigitalLab26/lab6/seq_gen2.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 9 dff_reset 0 22 GV;2zQ>aU]?G?Z84:hzWf3
+l42
+L41
+VEjC=gQWheR<anRH^6C68E3
+!s100 bo3SlCJV5lA_I?@g6Qe2W3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edff_set
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L18
+VUeC=TkF?CWY2fha4Hzb@03
+!s100 _i;EZiUHFgjBR<Z3V25iM3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 7 dff_set 0 22 UeC=TkF?CWY2fha4Hzb@03
+l23
+L22
+VkiJWYDRnDV1M2GW`oJ[ld2
+!s100 BRodAThez@Az?INoHDeRZ2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1789106341
+R2
+R3
+R0
+Z14 8D:/DigitalLab26/lab6/DUT.vhdl
+Z15 FD:/DigitalLab26/lab6/DUT.vhdl
+l0
+L4
+VAY;;^O@Qf4f]zLPRYJ_3N1
+!s100 <ghfJ2ncJ<IB5WdWX:TD@0
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab6/DUT.vhdl|
+Z17 !s107 D:/DigitalLab26/lab6/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+Z18 DPx4 work 9 flipflops 0 22 ;5n2e>TKJ84N_4Xhnnc;Y3
+Z19 DEx4 work 19 sequence_generator2 0 22 VRo@UojFY6jS6`QJcMh2B1
+R2
+R3
+DEx4 work 3 dut 0 22 AY;;^O@Qf4f]zLPRYJ_3N1
+l11
+L9
+VcFXR8C3IJ]Vj[3be:P4K70
+!s100 @J<]<1f0Re<Li:_>[^G@82
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Pflipflops
+R2
+R3
+R1
+R0
+R4
+R5
+l0
+L4
+V;5n2e>TKJ84N_4Xhnnc;Y3
+!s100 DkMMf^70bc3K_9PgEhENa2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esequence_generator2
+R1
+R18
+R2
+R3
+R0
+R4
+R5
+l0
+L58
+VVRo@UojFY6jS6`QJcMh2B1
+!s100 =jTUkj8kP_ojSJ?cMn2^f0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Astruct
+R18
+R2
+R3
+R19
+l68
+L65
+VS>_mcjC9[;9;Rjf@:Sg:40
+!s100 <0Q7EEj=[N2FJi<^Y=3[O2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z20 w1789108220
+R3
+R2
+R0
+Z21 8D:/DigitalLab26/lab6/Testbench.vhdl
+Z22 FD:/DigitalLab26/lab6/Testbench.vhdl
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z23 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab6/Testbench.vhdl|
+Z24 !s107 D:/DigitalLab26/lab6/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l61
+L10
+V25E`lhLz]UIM<Bg:^jgZg1
+!s100 MYKUBl`@HdWc?9XDS]Pc@3
+R6
+31
+R7
+!i10b 1
+R8
+R23
+R24
+!i113 1
+R11
+R12

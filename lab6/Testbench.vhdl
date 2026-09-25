@@ -8,8 +8,9 @@ entity Testbench is
 end entity;
 
 architecture Behave of Testbench is
-    constant number_of_inputs  : integer := 10;
-    constant number_of_outputs : integer := 8;
+
+    constant number_of_inputs  : integer := 2;
+    constant number_of_outputs : integer := 1;
 
     component DUT is
         port(
@@ -70,18 +71,22 @@ begin
         variable output_mask_var   : bit_vector(number_of_outputs-1 downto 0);
 
         variable output_comp_var : std_logic_vector(number_of_outputs-1 downto 0);
-        constant ZZZZZ : std_logic_vector(number_of_outputs-1 downto 0) := (others => '0');
+
+        constant ZZZZZ : std_logic_vector(number_of_outputs-1 downto 0)
+            := (others => '0');
 
         variable INPUT_LINE  : line;
         variable OUTPUT_LINE : line;
         variable LINE_COUNT  : integer := 0;
 
     begin
+
         while not endfile(INFILE) loop
 
             LINE_COUNT := LINE_COUNT + 1;
 
             readLine(INFILE, INPUT_LINE);
+
             read(INPUT_LINE, input_vector_var);
             read(INPUT_LINE, output_vector_var);
             read(INPUT_LINE, output_mask_var);
@@ -95,10 +100,12 @@ begin
                 (output_vector xor to_std_logic_vector(output_vector_var));
 
             if output_comp_var /= ZZZZZ then
-                write(OUTPUT_LINE, to_string("ERROR: line "));
-                write(OUTPUT_LINE, LINE_COUNT);
-                writeline(OUTFILE, OUTPUT_LINE);
-                err_flag := true;
+
+					 report "ERROR: line " & integer'image(LINE_COUNT)
+						  severity error;
+
+					 err_flag := true;
+
             end if;
 
             write(OUTPUT_LINE, to_bit_vector(input_vector));
@@ -107,17 +114,19 @@ begin
             writeline(OUTFILE, OUTPUT_LINE);
 
             wait for 4 ns;
-        end loop;
 
-        assert err_flag
+        end loop;
+		  
+        assert not err_flag
             report "SUCCESS, all tests passed."
             severity note;
 
-        assert not err_flag
+        assert err_flag
             report "FAILURE, some tests failed."
             severity error;
 
         wait;
+
     end process;
 
     dut_instance : DUT

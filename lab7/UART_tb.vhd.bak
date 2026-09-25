@@ -1,0 +1,147 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity UART_tb is
+end UART_tb;
+
+architecture Behavioral of UART_tb is
+
+    ----------------------------------------------------------------
+    -- DUT signals
+    ----------------------------------------------------------------
+    signal clk         : std_logic := '0';
+    signal rx_serial   : std_logic := '1';
+    signal led         : std_logic_vector(7 downto 0);
+
+    ----------------------------------------------------------------
+    -- UART parameters
+    ----------------------------------------------------------------
+    constant CLK_PERIOD : time := 20 ns;       -- 50 MHz
+    constant BAUD_RATE  : integer := 9600;
+    constant BIT_PERIOD : time := 104.167 us;  -- 1 / 9600
+
+begin
+
+    ----------------------------------------------------------------
+    -- DUT
+    ----------------------------------------------------------------
+    uut : entity work.UART
+        generic map (
+            g_CLKS_PER_BIT => 521
+        )
+        port map (
+            i_Clk       => clk,
+            i_RX_Serial => rx_serial,
+            o_LED       => led
+        );
+
+    ----------------------------------------------------------------
+    -- 50 MHz clock
+    ----------------------------------------------------------------
+    clk_process : process
+    begin
+        while true loop
+
+            clk <= '0';
+            wait for CLK_PERIOD / 2;
+
+            clk <= '1';
+            wait for CLK_PERIOD / 2;
+
+        end loop;
+    end process;
+
+
+    ----------------------------------------------------------------
+    -- UART transmitter procedure
+    --
+    -- Sends:
+    --   1 start bit
+    --   8 data bits, LSB first
+    --   1 stop bit
+    ----------------------------------------------------------------
+    uart_send : process
+
+        procedure send_byte(
+            constant data : in std_logic_vector(7 downto 0)
+        ) is
+        begin
+
+            -- Start bit
+            rx_serial <= '0';
+            wait for BIT_PERIOD;
+
+            -- Data bits, LSB first
+            for i in 0 to 7 loop
+                rx_serial <= data(i);
+                wait for BIT_PERIOD;
+            end loop;
+
+            -- Stop bit
+            rx_serial <= '1';
+            wait for BIT_PERIOD;
+
+        end procedure;
+
+    begin
+
+        ----------------------------------------------------------------
+        -- UART line is idle HIGH
+        ----------------------------------------------------------------
+        rx_serial <= '1';
+
+        -- Allow DUT to initialize
+        wait for 1 ms;
+
+
+        ----------------------------------------------------------------
+        -- TEST 1
+        -- Send ASCII '5' = x"35"
+        --
+        -- Expected:
+        -- N = 5
+        -- LEDs should count:
+        -- 0 -> 1 -> 2 -> 3 -> 4 -> 0 ...
+        ----------------------------------------------------------------
+        send_byte(x"35");
+
+        -- Wait for UART reception and counter operation
+        wait for 1 sec;
+
+
+        ----------------------------------------------------------------
+        -- TEST 2
+        -- Send ASCII '3' = x"33"
+        --
+        -- Expected:
+        -- N changes from 5 to 3
+        --
+        -- Counter should subsequently operate:
+        -- 0 -> 1 -> 2 -> 0 ...
+        ----------------------------------------------------------------
+        send_byte(x"33");
+
+        wait for 1 sec;
+
+
+        ----------------------------------------------------------------
+        -- TEST 3
+        -- Send ASCII '9' = x"39"
+        --
+        -- Expected:
+        -- N changes to 9
+        ----------------------------------------------------------------
+        send_byte(x"39");
+
+        wait for 1 sec;
+
+
+        ----------------------------------------------------------------
+        -- End simulation
+        ----------------------------------------------------------------
+        wait;
+
+    end process;
+
+end Behavioral;

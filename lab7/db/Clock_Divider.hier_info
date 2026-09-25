@@ -1,0 +1,76 @@
+|UART
+i_Clk => ClockDiv:u_clk_div.clk_in
+i_RX_Serial => r_RX_Data_R.DATAIN
+o_LED[0] <= r_Counter[0].DB_MAX_OUTPUT_PORT_TYPE
+o_LED[1] <= r_Counter[1].DB_MAX_OUTPUT_PORT_TYPE
+o_LED[2] <= r_Counter[2].DB_MAX_OUTPUT_PORT_TYPE
+o_LED[3] <= r_Counter[3].DB_MAX_OUTPUT_PORT_TYPE
+o_LED[4] <= <GND>
+o_LED[5] <= <GND>
+o_LED[6] <= <GND>
+o_LED[7] <= <GND>
+
+
+|UART|ClockDiv:u_clk_div
+clk_in => clk_2Hz.CLK
+clk_in => clk_5MHz.CLK
+clk_in => count_2Hz[0].CLK
+clk_in => count_2Hz[1].CLK
+clk_in => count_2Hz[2].CLK
+clk_in => count_2Hz[3].CLK
+clk_in => count_2Hz[4].CLK
+clk_in => count_2Hz[5].CLK
+clk_in => count_2Hz[6].CLK
+clk_in => count_2Hz[7].CLK
+clk_in => count_2Hz[8].CLK
+clk_in => count_2Hz[9].CLK
+clk_in => count_2Hz[10].CLK
+clk_in => count_2Hz[11].CLK
+clk_in => count_2Hz[12].CLK
+clk_in => count_2Hz[13].CLK
+clk_in => count_2Hz[14].CLK
+clk_in => count_2Hz[15].CLK
+clk_in => count_2Hz[16].CLK
+clk_in => count_2Hz[17].CLK
+clk_in => count_2Hz[18].CLK
+clk_in => count_2Hz[19].CLK
+clk_in => count_2Hz[20].CLK
+clk_in => count_2Hz[21].CLK
+clk_in => count_2Hz[22].CLK
+clk_in => count_2Hz[23].CLK
+clk_in => count_5MHz[0].CLK
+clk_in => count_5MHz[1].CLK
+clk_in => count_5MHz[2].CLK
+reset => clk_2Hz.ACLR
+reset => clk_5MHz.ACLR
+reset => count_2Hz[0].PRESET
+reset => count_2Hz[1].ACLR
+reset => count_2Hz[2].ACLR
+reset => count_2Hz[3].ACLR
+reset => count_2Hz[4].ACLR
+reset => count_2Hz[5].ACLR
+reset => count_2Hz[6].ACLR
+reset => count_2Hz[7].ACLR
+reset => count_2Hz[8].ACLR
+reset => count_2Hz[9].ACLR
+reset => count_2Hz[10].ACLR
+reset => count_2Hz[11].ACLR
+reset => count_2Hz[12].ACLR
+reset => count_2Hz[13].ACLR
+reset => count_2Hz[14].ACLR
+reset => count_2Hz[15].ACLR
+reset => count_2Hz[16].ACLR
+reset => count_2Hz[17].ACLR
+reset => count_2Hz[18].ACLR
+reset => count_2Hz[19].ACLR
+reset => count_2Hz[20].ACLR
+reset => count_2Hz[21].ACLR
+reset => count_2Hz[22].ACLR
+reset => count_2Hz[23].ACLR
+reset => count_5MHz[0].PRESET
+reset => count_5MHz[1].ACLR
+reset => count_5MHz[2].ACLR
+clk_out_5MHz <= clk_5MHz.DB_MAX_OUTPUT_PORT_TYPE
+clk_out_2Hz <= clk_2Hz.DB_MAX_OUTPUT_PORT_TYPE
+
+

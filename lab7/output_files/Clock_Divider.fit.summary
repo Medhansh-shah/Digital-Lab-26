@@ -1,0 +1,18 @@
+Fitter Status : Successful - Fri Sep 25 15:36:42 2026
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Clock_Divider
+Top-level Entity Name : UART
+Family : MAX 10
+Device : 10M25SAE144C8G
+Timing Models : Final
+Total logic elements : 126 / 24,960 ( < 1 % )
+    Total combinational functions : 122 / 24,960 ( < 1 % )
+    Dedicated logic registers : 66 / 24,960 ( < 1 % )
+Total registers : 66
+Total pins : 10 / 101 ( 10 % )
+Total virtual pins : 0
+Total memory bits : 0 / 691,200 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 110 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )

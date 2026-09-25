@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, D:/DigitalLab26/lab6/seq_gen2.vhd
+source_file = 1, D:/DigitalLab26/lab6/Testbench.vhdl
+source_file = 1, D:/DigitalLab26/lab6/DUT.vhdl
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, D:/DigitalLab26/lab6/db/Sequence_Generator.cbx.xml
+design_name = Sequence_generator2
+instance = comp, \clock~I\, clock, Sequence_generator2, 1
+instance = comp, \reset~I\, reset, Sequence_generator2, 1
+instance = comp, \FF1|Q\, FF1|Q, Sequence_generator2, 1
+instance = comp, \FF2|Q\, FF2|Q, Sequence_generator2, 1
+instance = comp, \FF0|Q\, FF0|Q, Sequence_generator2, 1
+instance = comp, \y~I\, y, Sequence_generator2, 1

@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Clock_Divider_tb is
+end entity;
+
+architecture sim of Clock_Divider_tb is
+	constant ClockFreq : integer := 50e6;
+	constant ClockPeriod: time := 1000 ms/ClockFreq;
+	
+	signal clk1 : std_logic := '1';
+	signal clk2 : std_logic;
+	
+	begin
+	
+	kanye :entity work.Clock_div(caesar)
+	port map(
+		clk1 => clk1,
+		clk2 =>clk2
+		);
+		
+		clk1 <= not(clk1) after ClockPeriod/2;
+		
+		
+	end architecture;
