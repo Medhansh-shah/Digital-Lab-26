@@ -1,0 +1,131 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity datapath is
+    port (
+        clk      : in  std_logic;
+        rst      : in  std_logic;
+        
+        -- Inputs from Top-Level
+        A        : in  std_logic_vector(3 downto 0);
+        B        : in  std_logic_vector(3 downto 0);
+        
+        -- Control Signals from Controller
+        ld_x     : in  std_logic;
+        ld_y     : in  std_logic;
+        swap_en  : in  std_logic;
+        
+        -- Status Flags to Controller
+        x_lt_y   : out std_logic;
+        y_eq_0   : out std_logic;
+        
+        -- Output GCD result to Top-Level
+        gcd_out  : out std_logic_vector(3 downto 0)
+    );
+end entity datapath;
+
+architecture struct of datapath is
+
+    -- 1. Component Declarations
+    component reg4 is
+        port (
+            clk   : in  std_logic;
+            rst   : in  std_logic;
+            load  : in  std_logic;
+            d_in  : in  std_logic_vector(3 downto 0);
+            d_out : out std_logic_vector(3 downto 0)
+        );
+    end component;
+
+    component subtractor is
+        port (
+            A : in  std_logic_vector(3 downto 0);
+            B : in  std_logic_vector(3 downto 0);
+            D : out std_logic_vector(3 downto 0)
+        );
+    end component;
+
+    component comparator is
+        port (
+            X      : in  std_logic_vector(3 downto 0);
+            Y      : in  std_logic_vector(3 downto 0);
+            x_lt_y : out std_logic
+        );
+    end component;
+
+    component zero_detector is
+        port (
+            Y      : in  std_logic_vector(3 downto 0);
+            y_eq_0 : out std_logic
+        );
+    end component;
+
+    -- 2. Internal Signals
+    signal x_reg_out : std_logic_vector(3 downto 0);
+    signal y_reg_out : std_logic_vector(3 downto 0);
+    signal sub_out   : std_logic_vector(3 downto 0);
+    signal x_next    : std_logic_vector(3 downto 0);
+    signal y_next    : std_logic_vector(3 downto 0);
+
+begin
+
+    -- 3. Multiplexer Logic (Method 1: Concurrent Assignments)
+    -- When both ld_x and ld_y are high without swap, it means initial load from A and B
+    x_next <= A         when (ld_x = '1' and ld_y = '1' and swap_en = '0') else
+              y_reg_out when (swap_en = '1') else
+              sub_out;  -- Default: Subtraction result (X - Y)
+
+    y_next <= B         when (ld_x = '1' and ld_y = '1' and swap_en = '0') else
+              x_reg_out when (swap_en = '1') else
+              y_reg_out;
+
+    -- 4. Component Instantiations
+    
+    -- Register X
+    REG_X: reg4
+        port map (
+            clk   => clk,
+            rst   => rst,
+            load  => ld_x,
+            d_in  => x_next,
+            d_out => x_reg_out
+        );
+
+    -- Register Y
+    REG_Y: reg4
+        port map (
+            clk   => clk,
+            rst   => rst,
+            load  => ld_y,
+            d_in  => y_next,
+            d_out => y_reg_out
+        );
+
+    -- Subtractor (Computes X - Y)
+    SUB: subtractor
+        port map (
+            A => x_reg_out,
+            B => y_reg_out,
+            D => sub_out
+        );
+
+    -- Comparator (Checks if X < Y)
+    COMP: comparator
+        port map (
+            X      => x_reg_out,
+            Y      => y_reg_out,
+            x_lt_y => x_lt_y
+        );
+
+    -- Zero Detector (Checks if Y = 0)
+    ZERO_DET: zero_detector
+        port map (
+            Y      => y_reg_out,
+            y_eq_0 => y_eq_0
+        );
+
+    -- Output assignment: GCD value is held in Register X when complete
+    gcd_out <= x_reg_out;
+
+end architecture struct;

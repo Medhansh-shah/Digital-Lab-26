@@ -1,0 +1,58 @@
+library ieee ;
+2 use ieee . std_logic_1164 . ALL ;
+3 use ieee . numeric_std .all ;
+4
+5 entity UART_Timer is
+6 generic (
+7 g_CLKS_PER_BIT : integer := 521 -- For 5 MHz clock and 9600 baud
+8 ) ;
+9 port (
+10 i_Clk : in std_logic ; -- 50 MHz input clock
+11 i_Reset : in std_logic ; -- Hardware Reset button
+12 i_RX_Serial : in std_logic ;
+13 o_LED : out std_logic_vector (7 downto 0)
+14 ) ;
+15 end UART_Timer ;
+16
+17 architecture rtl of UART_Timer is
+18
+19 -- Clocks
+20 signal clk_5MHz : std_logic ;
+21 signal clk_1Hz : std_logic ;
+22 signal clk_5Hz : std_logic ;
+23
+24 -- UART Signals
+25 type t_SM_Main is ( s_Idle , s_RX_Start_Bit , s_RX_Data_Bits ,
+26 s_RX_Stop_Bit , s_Cleanup ) ;
+27 signal r_SM_Main : t_SM_Main := s_Idle ;
+28 signal r_RX_Data_R : std_logic := '0';
+29 signal r_RX_Data : std_logic := '0';
+30 signal r_Clk_Count : integer range 0 to g_CLKS_PER_BIT -1 := 0;
+31 signal r_Bit_Index : integer range 0 to 7 := 0;
+32 signal r_RX_Byte : std_logic_vector (7 downto 0) := ( others = > '0') ;
+33 signal r_RX_DV : std_logic := '0';
+34
+35 -- FSM States for Timer
+36 type t_Timer_State is ( S_DIGIT_1 , S_DIGIT_2 , S_DIGIT_3 , S_PROCEED , S_DONE ) ;
+37 signal r_Timer_State : t_Timer_State := S_DIGIT_1 ;
+38
+39 signal r_Accumulator : integer := 0;
+40 signal r_Timer_Count : integer range 0 to 255 := 0;
+41 signal r_Blink_State : std_logic := '0';
+42
+43 -- Clock Divider Component
+44 component ClockDiv is
+45 port (
+46 clk_in : in std_logic ;
+47 reset : in std_logic ;
+48 clk_out_5MHz : out std_logic ;
+49 clk_out_1Hz : out std_logic ;
+50 clk_out_5Hz : out std_logic
+51 ) ;
+52 end component ;
+2
+53
+54 begin
+55
+56 -- Add your code here
+57 end rtl ;

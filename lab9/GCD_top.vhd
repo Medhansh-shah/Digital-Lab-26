@@ -1,0 +1,87 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity gcd_top is
+    port (
+        clk     : in  std_logic;
+        rst     : in  std_logic;
+        start   : in  std_logic;
+        A       : in  std_logic_vector(3 downto 0);
+        B       : in  std_logic_vector(3 downto 0);
+        ready   : out std_logic;
+        gcd_out : out std_logic_vector(3 downto 0)
+    );
+end entity gcd_top;
+
+architecture struct of gcd_top is
+
+    -- 1. Component Declaration for Datapath
+    component datapath is
+        port (
+            clk      : in  std_logic;
+            rst      : in  std_logic;
+            A        : in  std_logic_vector(3 downto 0);
+            B        : in  std_logic_vector(3 downto 0);
+            ld_x     : in  std_logic;
+            ld_y     : in  std_logic;
+            swap_en  : in  std_logic;
+            x_lt_y   : out std_logic;
+            y_eq_0   : out std_logic;
+            gcd_out  : out std_logic_vector(3 downto 0)
+        );
+    end component;
+
+    -- 2. Component Declaration for Controller
+    component controller is
+        port (
+            clk     : in  std_logic;
+            rst     : in  std_logic;
+            start   : in  std_logic;
+            x_lt_y  : in  std_logic;
+            y_eq_0  : in  std_logic;
+            ld_x    : out std_logic;
+            ld_y    : out std_logic;
+            swap_en : out std_logic;
+            ready   : out std_logic
+        );
+    end component;
+
+    -- 3. Internal Interconnect Signals
+    signal ld_x_sig    : std_logic;
+    signal ld_y_sig    : std_logic;
+    signal swap_en_sig : std_logic;
+    signal x_lt_y_sig  : std_logic;
+    signal y_eq_0_sig  : std_logic;
+
+begin
+
+    -- 4. Instantiation of Datapath
+    DP_INST : datapath
+        port map (
+            clk      => clk,
+            rst      => rst,
+            A        => A,
+            B        => B,
+            ld_x     => ld_x_sig,
+            ld_y     => ld_y_sig,
+            swap_en  => swap_en_sig,
+            x_lt_y   => x_lt_y_sig,
+            y_eq_0   => y_eq_0_sig,
+            gcd_out  => gcd_out
+        );
+
+    -- 5. Instantiation of Controller
+    CTRL_INST : controller
+        port map (
+            clk     => clk,
+            rst     => rst,
+            start   => start,
+            x_lt_y  => x_lt_y_sig,
+            y_eq_0  => y_eq_0_sig,
+            ld_x    => ld_x_sig,
+            ld_y    => ld_y_sig,
+            swap_en => swap_en_sig,
+            ready   => ready
+        );
+
+end architecture struct;

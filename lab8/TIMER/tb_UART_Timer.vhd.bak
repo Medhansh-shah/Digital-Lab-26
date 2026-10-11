@@ -1,0 +1,104 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_UART_Timer is
+end entity tb_UART_Timer;
+
+architecture sim of tb_UART_Timer is
+
+    -- Component Declaration for the Unit Under Test (UUT)
+    component UART_Timer is
+        generic (
+            g_CLKS_PER_BIT : integer := 521
+        );
+        port (
+            i_Clk       : in  std_logic;
+            i_Reset     : in  std_logic;
+            i_RX_Serial : in  std_logic;
+            o_LED       : out std_logic_vector(7 downto 0)
+        );
+    end component;
+
+    -- Simulation Constants
+    constant c_CLK_PERIOD : time := 20 ns;       -- 50 MHz Clock
+    constant c_BIT_PERIOD : time := 104.167 us;  -- 9600 Baud (1 / 9600)
+
+    -- Testbench Signals
+    signal tb_clk       : std_logic := '0';
+    signal tb_reset     : std_logic := '1';
+    signal tb_rx_serial : std_logic := '1'; -- UART idle state is high
+    signal tb_led       : std_logic_vector(7 downto 0);
+
+    -- Procedure to emulate TeraTerm sending a byte over the serial line
+    procedure UART_WRITE_BYTE (
+        i_data_in       : in  std_logic_vector(7 downto 0);
+        signal o_serial : out std_logic
+    ) is
+    begin
+        -- 1. Send Start Bit (Low)
+        o_serial <= '0';
+        wait for c_BIT_PERIOD;
+
+        -- 2. Send 8 Data Bits (LSB First)
+        for i in 0 to 7 loop
+            o_serial <= i_data_in(i);
+            wait for c_BIT_PERIOD;
+        end loop;
+
+        -- 3. Send Stop Bit (High)
+        o_serial <= '1';
+        wait for c_BIT_PERIOD;
+    end procedure;
+
+begin
+
+    -- Instantiate the UART_Timer
+    UUT : UART_Timer
+        port map (
+            i_Clk       => tb_clk,
+            i_Reset     => tb_reset,
+            i_RX_Serial => tb_rx_serial,
+            o_LED       => tb_led
+        );
+
+    -- Generate 50 MHz Master Clock
+    p_Clk_Gen : process
+    begin
+        while true loop
+            tb_clk <= '0';
+            wait for c_CLK_PERIOD / 2;
+            tb_clk <= '1';
+            wait for c_CLK_PERIOD / 2;
+        end loop;
+    end process;
+
+    -- Main Stimulus Process
+    p_Stimulus : process
+    begin
+        -- Assert Reset
+        tb_reset     <= '1';
+        tb_rx_serial <= '1';
+        wait for 100 ns;
+        tb_reset     <= '0';
+        wait for 100 us;
+
+        -- Test Case: Enter "15" and press Enter
+        -- Send ASCII '1' (0x31)
+        UART_WRITE_BYTE(x"31", tb_rx_serial);
+        wait for 1 ms; -- Wait between keystrokes
+
+        -- Send ASCII '5' (0x35)
+        UART_WRITE_BYTE(x"35", tb_rx_serial);
+        wait for 1 ms;
+
+        -- Send ASCII Carriage Return '\r' (0x0D) to execute
+        UART_WRITE_BYTE(x"0D", tb_rx_serial);
+
+        -- Let simulation run to observe the countdown
+        wait for 20 sec;
+
+        wait; -- End simulation
+    end process;
+
+end architecture sim;

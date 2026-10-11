@@ -1,0 +1,369 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DigitalLab26/lab9/simulation/modelsim
+Ecomparator
+Z1 w1791402912
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8D:/DigitalLab26/lab9/comparator.vhd
+Z6 FD:/DigitalLab26/lab9/comparator.vhd
+l0
+L5
+VjM=Rl=EeI5mb?MCVNHa5H0
+!s100 hgd>H;Pe;1AAUGgEDEN3b0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1791720079
+!i10b 1
+Z9 !s108 1791720078.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/comparator.vhd|
+Z11 !s107 D:/DigitalLab26/lab9/comparator.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+R4
+DEx4 work 10 comparator 0 22 jM=Rl=EeI5mb?MCVNHa5H0
+l14
+L13
+VdJN2JG@TbHWo4VmO2D3cz0
+!s100 1B0EAgEg6KA4o0YgTlKT22
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econtroller
+Z14 w1791404248
+R3
+R4
+R0
+Z15 8D:/DigitalLab26/lab9/controller.vhd
+Z16 FD:/DigitalLab26/lab9/controller.vhd
+l0
+L4
+VI75EZ5YVAM7PZLzTW2HX;2
+!s100 n09YDlcRmGQh6dnBoZFBP1
+R7
+31
+Z17 !s110 1791720082
+!i10b 1
+Z18 !s108 1791720081.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/controller.vhd|
+Z20 !s107 D:/DigitalLab26/lab9/controller.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+DEx4 work 10 controller 0 22 I75EZ5YVAM7PZLzTW2HX;2
+l29
+L24
+VRBVV2NS><R0_19LD>lzOS3
+!s100 Ri?lI1RYz1:>lLTeKld>l2
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Edatapath
+Z21 w1791407436
+R2
+R3
+R4
+R0
+Z22 8D:/DigitalLab26/lab9/datapath.vhd
+Z23 FD:/DigitalLab26/lab9/datapath.vhd
+l0
+L5
+ViL]MJ[86?>Gd;_SDS?eU:3
+!s100 ]zRZjMd<6Ri`fLomhkcJ^0
+R7
+31
+R17
+!i10b 1
+Z24 !s108 1791720082.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/datapath.vhd|
+Z26 !s107 D:/DigitalLab26/lab9/datapath.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 8 datapath 0 22 iL]MJ[86?>Gd;_SDS?eU:3
+l72
+L28
+VLGaNRiizVDD5k^Re[^ldB1
+!s100 MVl>WbKg66D9f152Yk6Ui1
+R7
+31
+R17
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13
+Edut
+Z27 w1791406034
+R3
+R4
+R0
+Z28 8D:/DigitalLab26/lab9/DUT.vhdl
+Z29 FD:/DigitalLab26/lab9/DUT.vhdl
+l0
+L7
+VHhM8b;>>bzd?dBPFbOhDO1
+!s100 ha?5B?83JFP_5@Y:UE`GJ3
+R7
+31
+Z30 !s110 1791720078
+!i10b 1
+R9
+Z31 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/DUT.vhdl|
+Z32 !s107 D:/DigitalLab26/lab9/DUT.vhdl|
+!i113 1
+R12
+R13
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 HhM8b;>>bzd?dBPFbOhDO1
+l24
+L12
+V@<OGX?=5fL88SPF7JZ2a10
+!s100 7aZKHjTGMe7jLDf:;Ze[<2
+R7
+31
+R30
+!i10b 1
+R9
+R31
+R32
+!i113 1
+R12
+R13
+Egcd_top
+Z33 w1791404888
+R3
+R4
+R0
+Z34 8D:/DigitalLab26/lab9/GCD_top.vhd
+Z35 FD:/DigitalLab26/lab9/GCD_top.vhd
+l0
+L4
+V6m_kB?eXE[jm0MT>=?naA2
+!s100 lcHO9j^3[]X9DiAk2^=n83
+R7
+31
+Z36 !s110 1791720083
+!i10b 1
+Z37 !s108 1791720083.000000
+Z38 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/GCD_top.vhd|
+Z39 !s107 D:/DigitalLab26/lab9/GCD_top.vhd|
+!i113 1
+R12
+R13
+Astruct
+R3
+R4
+DEx4 work 7 gcd_top 0 22 6m_kB?eXE[jm0MT>=?naA2
+l56
+L16
+V:OdhGWaD@?Y^R55c4dSU80
+!s100 `dU8jidk9QfN;o5SP11[b3
+R7
+31
+R36
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R12
+R13
+Ereg4
+Z40 w1791404340
+R3
+R4
+R0
+Z41 8D:/DigitalLab26/lab9/reg4.vhd
+Z42 FD:/DigitalLab26/lab9/reg4.vhd
+l0
+L4
+V^=LKCjPg;b6NcWS^H;DVJ0
+!s100 kOATdOXS7moalRGCY]I9Q2
+R7
+31
+Z43 !s110 1791720081
+!i10b 1
+Z44 !s108 1791720080.000000
+Z45 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/reg4.vhd|
+Z46 !s107 D:/DigitalLab26/lab9/reg4.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+DEx4 work 4 reg4 0 22 ^=LKCjPg;b6NcWS^H;DVJ0
+l15
+L14
+Vm=[4LdAEH8HOb4zK;UAMg0
+!s100 0;9F]7V6AJUR]TRc^2XD?2
+R7
+31
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R12
+R13
+Esubtractor
+Z47 w1791400944
+R2
+R3
+R4
+R0
+Z48 8D:/DigitalLab26/lab9/subtractor.vhd
+Z49 FD:/DigitalLab26/lab9/subtractor.vhd
+l0
+L5
+V0lDYEz5D831>@1@YRG1gM0
+!s100 k`CR[IX2gc_<[QQ0jmhZE2
+R7
+31
+R30
+!i10b 1
+R9
+Z50 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/subtractor.vhd|
+Z51 !s107 D:/DigitalLab26/lab9/subtractor.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 10 subtractor 0 22 0lDYEz5D831>@1@YRG1gM0
+l14
+L13
+Vcdo=ZZTZNkS5;X;KfmBdN3
+!s100 >zg=UjL4]bR2Yh15Hd:kU0
+R7
+31
+R30
+!i10b 1
+R9
+R50
+R51
+!i113 1
+R12
+R13
+Etestbench
+Z52 w1791405910
+R4
+R3
+R0
+Z53 8D:/DigitalLab26/lab9/Testbench.vhdl
+Z54 FD:/DigitalLab26/lab9/Testbench.vhdl
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R7
+31
+Z55 !s110 1791720084
+!i10b 1
+R37
+Z56 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/Testbench.vhdl|
+Z57 !s107 D:/DigitalLab26/lab9/Testbench.vhdl|
+!i113 1
+R12
+R13
+Abehave
+R4
+R3
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l69
+L9
+VRZMm0m@L@zAi@jj3ob[Y53
+!s100 eC^k]3cKo?P>]Mki^n=372
+R7
+31
+R55
+!i10b 1
+R37
+R56
+R57
+!i113 1
+R12
+R13
+Ezero_detector
+Z58 w1791404296
+R2
+R3
+R4
+R0
+Z59 8D:/DigitalLab26/lab9/zero_detector.vhd
+Z60 FD:/DigitalLab26/lab9/zero_detector.vhd
+l0
+L5
+VkZU9TNSWZPznF2HnQ_VZE2
+!s100 ^OnIXR;G[`=NYGkO508_91
+R7
+31
+Z61 !s110 1791720080
+!i10b 1
+Z62 !s108 1791720079.000000
+Z63 !s90 -reportprogress|300|-93|-work|work|D:/DigitalLab26/lab9/zero_detector.vhd|
+Z64 !s107 D:/DigitalLab26/lab9/zero_detector.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R2
+R3
+R4
+DEx4 work 13 zero_detector 0 22 kZU9TNSWZPznF2HnQ_VZE2
+l13
+L12
+VSIOR4aQW66z]<l7;_04:z2
+!s100 ?=zI@Cd?b]2MjkQ=iod>L3
+R7
+31
+R61
+!i10b 1
+R62
+R63
+R64
+!i113 1
+R12
+R13

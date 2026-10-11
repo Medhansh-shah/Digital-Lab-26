@@ -1,0 +1,16 @@
+
+State Machine - |UART_Timer|r_Timer_State
+Name r_Timer_State.S_DONE r_Timer_State.S_PROCEED r_Timer_State.S_DIGIT_3 r_Timer_State.S_DIGIT_2 r_Timer_State.S_DIGIT_1 
+r_Timer_State.S_DIGIT_1 0 0 0 0 0 
+r_Timer_State.S_DIGIT_2 0 0 0 1 1 
+r_Timer_State.S_DIGIT_3 0 0 1 0 1 
+r_Timer_State.S_PROCEED 0 1 0 0 1 
+r_Timer_State.S_DONE 1 0 0 0 1 
+
+State Machine - |UART_Timer|r_SM_Main
+Name r_SM_Main.s_Cleanup r_SM_Main.s_RX_Stop_Bit r_SM_Main.s_RX_Data_Bits r_SM_Main.s_RX_Start_Bit r_SM_Main.s_Idle 
+r_SM_Main.s_Idle 0 0 0 0 0 
+r_SM_Main.s_RX_Start_Bit 0 0 0 1 1 
+r_SM_Main.s_RX_Data_Bits 0 0 1 0 1 
+r_SM_Main.s_RX_Stop_Bit 0 1 0 0 1 
+r_SM_Main.s_Cleanup 1 0 0 0 1 

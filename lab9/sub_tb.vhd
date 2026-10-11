@@ -1,0 +1,41 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity sub_tb is
+end entity;
+
+architecture sim of sub_tb is
+
+    signal A : std_logic_vector(3 downto 0);
+    signal B : std_logic_vector(3 downto 0);
+    signal D : std_logic_vector(3 downto 0);
+
+begin
+
+    uut : entity work.subtractor
+        port map (
+            A => A,
+            B => B,
+            D => D
+        );
+
+    process
+    begin
+
+        A <= "1110";  -- 14
+        B <= "1000";  -- 8
+        wait for 10 ns;
+
+        A <= "1000";  -- 8
+        B <= "0110";  -- 6
+        wait for 10 ns;
+
+        A <= "0101";  -- 5
+        B <= "0011";  -- 3
+        wait for 10 ns;
+
+        wait;
+    end process;
+
+end architecture sim;
