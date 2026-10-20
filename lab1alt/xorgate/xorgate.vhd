@@ -1,0 +1,70 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.Gates.all;
+
+entity XORGATE is
+	port(
+		A, B : in std_logic;
+		Y : out std_logic
+	);
+end entity XORGATE;
+
+architecture flow of XORGATE is
+	-- s1 = B~, s2 = A~, s3 = AB~ ka ~, s4 = A~B ka ~, and so on
+	signal s1, s2, s3, s4, s5, s6, s7, s8 : std_logic;
+	begin
+		G1 : NAND_2
+			port map(
+				A => B,
+				B => B,
+				Y => s1
+			);
+		G2 : NAND_2
+			port map(
+				A => A,
+				B => A,
+				Y => s2
+			);
+		G3 : NAND_2
+			port map(
+				A => A,
+				B => s1,
+				Y => s3
+			);
+		G4 : NAND_2
+			port map(
+				A => s2,
+				B => B,
+				Y => s4
+			);
+		G5 : NAND_2
+			port map(
+				A => s3,
+				B => s3,
+				Y => s5
+			);
+		G6 : NAND_2
+			port map(
+				A => s4,
+				B => s4,
+				Y => s6
+			);
+		G7 : NAND_2
+			port map(
+				A => s5,
+				B => s5,
+				Y => s7
+			);
+		G8 : NAND_2
+			port map(
+				A => s6,
+				B => s6,
+				Y => s8
+			);
+		G9: NAND_2
+			port map(
+				A => s7,
+				B => s8,
+				Y => Y
+			);
+end architecture;

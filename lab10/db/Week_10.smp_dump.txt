@@ -1,0 +1,6 @@
+
+State Machine - |pascal_top|pascal_fsm:u_fsm|state
+Name state.DONE state.COMP state.IDLE 
+state.IDLE 0 0 0 
+state.COMP 0 1 1 
+state.DONE 1 0 1 

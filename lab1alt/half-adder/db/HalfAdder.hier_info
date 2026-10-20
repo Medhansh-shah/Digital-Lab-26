@@ -1,0 +1,28 @@
+|DUT
+input_vector[0] => HalfAdder:add_instance.B
+input_vector[1] => HalfAdder:add_instance.A
+output_vector[0] << HalfAdder:add_instance.Cout
+output_vector[1] << HalfAdder:add_instance.Y
+
+
+|DUT|halfadder:add_instance
+A => XOR_2:G1.A
+A => AND_2:G2.A
+B => XOR_2:G1.B
+B => AND_2:G2.B
+Y <= XOR_2:G1.Y
+Cout <= AND_2:G2.Y
+
+
+|DUT|halfadder:add_instance|XOR_2:G1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|halfadder:add_instance|AND_2:G2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

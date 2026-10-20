@@ -1,0 +1,57 @@
+|DUT
+input_vector[0] => FULLADDER:add_instance.Cin
+input_vector[1] => FULLADDER:add_instance.B
+input_vector[2] => FULLADDER:add_instance.A
+output_vector[0] <= FULLADDER:add_instance.Cout
+output_vector[1] <= FULLADDER:add_instance.Y
+
+
+|DUT|FullAdder:add_instance
+A => XOR_2:G1.A
+A => AND_2:G3.A
+A => OR_2:G4.A
+B => XOR_2:G1.B
+B => AND_2:G3.B
+B => OR_2:G4.B
+Cin => XOR_2:G2.B
+Cin => AND_2:G5.A
+Y <= XOR_2:G2.Y
+Cout <= OR_2:G6.Y
+
+
+|DUT|FullAdder:add_instance|XOR_2:G1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FullAdder:add_instance|XOR_2:G2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FullAdder:add_instance|AND_2:G3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FullAdder:add_instance|OR_2:G4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FullAdder:add_instance|AND_2:G5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|FullAdder:add_instance|OR_2:G6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,50 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Week_10_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/DigitalLab26/lab10/pascal_fsm.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:26 on Oct 16,2026
+# vcom -reportprogress 300 -93 -work work D:/DigitalLab26/lab10/pascal_fsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pascal_fsm
+# -- Compiling architecture behavioral of pascal_fsm
+# End time: 14:33:26 on Oct 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/DigitalLab26/lab10/pascal_datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:26 on Oct 16,2026
+# vcom -reportprogress 300 -93 -work work D:/DigitalLab26/lab10/pascal_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pascal_datapath
+# -- Compiling architecture behavioral of pascal_datapath
+# End time: 14:33:27 on Oct 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/DigitalLab26/lab10/pascal_top.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:27 on Oct 16,2026
+# vcom -reportprogress 300 -93 -work work D:/DigitalLab26/lab10/pascal_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pascal_top
+# -- Compiling architecture structural of pascal_top
+# -- Loading entity pascal_fsm
+# -- Loading package NUMERIC_STD
+# -- Loading entity pascal_datapath
+# End time: 14:33:27 on Oct 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
