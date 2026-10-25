@@ -1,0 +1,66 @@
+|DUT
+input_vector[0] => pencoder:add_instance.D
+input_vector[1] => pencoder:add_instance.C
+input_vector[2] => pencoder:add_instance.B
+input_vector[3] => pencoder:add_instance.A
+output_vector[0] <= pencoder:add_instance.V
+output_vector[1] <= pencoder:add_instance.Y0
+output_vector[2] <= pencoder:add_instance.Y1
+
+
+|DUT|pencoder:add_instance
+A => OR_2:G1.A
+A => OR_2:G6.B
+A => OR_2:G7.A
+B => OR_2:G1.B
+B => INVERTER:G4.A
+B => OR_2:G7.B
+C => OR_2:G2.A
+C => AND_2:G5.B
+D => OR_2:G2.B
+Y1 <= OR_2:G7.Y
+Y0 <= OR_2:G6.Y
+V <= OR_2:G3.Y
+
+
+|DUT|pencoder:add_instance|OR_2:G1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pencoder:add_instance|OR_2:G2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pencoder:add_instance|OR_2:G3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pencoder:add_instance|INVERTER:G4
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pencoder:add_instance|AND_2:G5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pencoder:add_instance|OR_2:G6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|pencoder:add_instance|OR_2:G7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
