@@ -1,0 +1,11 @@
+Fitter Status : Successful - Mon Oct 26 07:27:22 2026
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : FibonacciDetector
+Top-level Entity Name : DUT
+Family : MAX V
+Device : 5M1270ZT144C5
+Timing Models : Final
+Total logic elements : 2 / 1,270 ( < 1 % )
+Total pins : 6 / 114 ( 5 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
